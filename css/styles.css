@@ -1,3 +1,32 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.woff2") format("woff2"),
+        url("../fonts/Poppins-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+        url("../fonts/Poppins-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  --text-color: #9e9aa8;
+  --strong-cyan: #2bd0d0;
+  --cyan: #9ae3e3;
+  --silver: #eff1f7;
+  --dark-violet: #4b3f6b;
+  --very-dark-violet: #3a3054;
+  --black: #34313d;
+}
+
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +46,11 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 22.5px;
   background-color: #fff;
-  color: #222;
+  color: black;
 }
 
 img {
@@ -33,9 +62,9 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,4 +73,78 @@ img {
 /* MAIN_CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+
+.site-header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 48px 0 0;
+}
+
+.site-logo {
+  display: flex;
+}
+
+.site-logo-img {
+  width: 120px;
+  height: 33px;
+  margin-right: 45px;
+}
+
+.site-nav {
+  margin-right: auto;
+}
+
+.sitenav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  list-style: none;
+}
+
+.sitenav-list-item:not(:last-child) {
+  margin: 0 30px 0 0;
+}
+
+.sitenav-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.sitenav-link:hover {
+  color: var(--black);
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.button-login {
+  margin: 0 37px 0 0;
+  padding: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color)
+}
+
+.button-login:hover {
+  color: var(--black);
+}
+
+.button-signup {
+  margin: 0;
+  padding: 9px 23px 8px 24px;
+  font-weight: bold;
+  border-radius: 28px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--strong-cyan);
+}
+
+.button-signup:hover {
+  background-color: var(--cyan);
 }
